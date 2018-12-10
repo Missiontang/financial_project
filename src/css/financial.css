@@ -21,6 +21,7 @@ a{
     top: 0;
     left: 0;
     background-color: #ffffff;
+    z-index: 99;
 }
 .nav-ul{
     height: 80px;
@@ -60,6 +61,7 @@ a{
     width: 100%;
     /*background-color: #2257c9;*/
     background: url("../img/banner1.jpg") center no-repeat;
+    position: relative;
 }
 .myAccount{
     padding: 8px 16px;
@@ -79,11 +81,39 @@ a{
     text-align: center;
     padding-top: 350px;
 }
+.banner-inner{
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+.banner-inner-list{
+    width: 1200px;
+    height: 150px;
+    background-color: #ffffff;
+}
+.banner-inner-list li{
+    height: 150px;
+    flex: 1;
+    border-right: 1px solid #cccccc;
+}
+
+
 .title-large{
     font-size: 48px;
     font-weight: normal;
     margin: 30px 15px;
     letter-spacing: 4px;
+    position: relative;
+}
+.title-large:after{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 10px;
+    background-color: rgba(98, 172, 255, 0.5);
 }
 .title-middle{
     font-size: 38px;
