@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>荷花数据,苏州本土金融平台，本着普惠金融，服务姑苏的理念为您提供安全、高效的互联网理财服务</title>
+    <link rel="stylesheet" href="src/css/financial.css">
+</head>
+<body>
+<div class="nav">
+    <div class="display-flex" style= " width: 1200px; justify-content: space-between">
+
+
+        <ul class="nav-ul">
+            <div style="display: flex">
+                <img src="src/img/logo.png" alt="" style="height: 40px">
+            </div>
+            <li>
+                <a class="nav-li" href="#">首页</a>
+
+            </li>
+            <li>
+                <a class="nav-li" href="#">我要出借</a>
+
+            </li>
+            <li>
+                <a class="nav-li" href="#">我要借款</a>
+
+            </li>
+            <li>
+                <a class="nav-li" href="#">安全保障</a>
+
+            </li>
+            <li>
+                <a class="nav-li" href="#">信息披露</a>
+
+            </li>
+
+        </ul>
+        <div class="display-flex">
+            <!--<img src="src/img/icon-me.png" style="width: 24px; margin-right: 10px">-->
+            <a class="myAccount" href="#">我的账户</a>
+        </div>
+    </div>
+</div>
+<div class="banner" id="banner">
+    <div class="banner-title">
+        <p class="title-little">
+            率先使用信用贷存管模式,放款回款均不触碰资金
+        </p>
+        <p>
+            <span class="title-large">荷花数据</span>
+            <span class="title-middle">信贷电子数据保全一站式服务平台</span>
+        </p>
+    </div>
+</div>
+
+<script>
+    window.onload = function () {
+        var banner = document.getElementById('banner');
+        var _height = window.innerHeight;
+        banner.style.height = _height + 'px'
+    };
+
+    window.onscroll = contorller(function () {
+        console.log(1);
+    });
+
+    var timer = null;
+
+    function contorller(fn) {
+        clearTimeout(timer);
+        timer = setTimeout(fn, 200)
+    }
+</script>
+</body>
+</html>
