@@ -5,7 +5,7 @@
 }
 a{
     text-decoration: none;
-    color: #333333;
+    color: #ffffff;
 }
 .display-flex{
     display: flex;
@@ -20,8 +20,13 @@ a{
     position: fixed;
     top: 0;
     left: 0;
-    background-color: #ffffff;
+    /*background-color: #ffffff;*/
     z-index: 99;
+    transition: all .2s ease-in-out;
+}
+.nav-scroll{
+    background-color: #0e1733;
+    box-shadow: 0 5px 10px rgba(14, 23, 51, .5);
 }
 .nav-ul{
     height: 80px;
@@ -33,7 +38,7 @@ a{
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-left: 40px;
+    margin-left: 80px;
     color: #ffffff;
 }
 .nav-li{
@@ -66,15 +71,15 @@ a{
 .myAccount{
     padding: 8px 16px;
     border-radius: 4px;
-    background-color: #ffffff;
+    background-color: #00a8ff;
     transition: all .2s ease-in-out;
     border: 1px solid #00a8ff;
-    color: #00a8ff;
+    color: #ffffff;
     font-size: 14px;
 }
 .myAccount:hover{
     color: #ffffff;
-    background-color: #00a8ff;
+    background-color: #48c1ff;
 }
 .banner-title{
     color: #ffffff;
@@ -159,4 +164,25 @@ a{
     font-weight: lighter;
     letter-spacing: 4px;
     margin: 30px 0;
+}
+
+.loading{
+    width: 48px;
+    height: 48px;
+    animation: loading infinite 1s;
+    /*transform: rotate(60deg);*/
+    border-radius: 50%;
+    display: inline-block;
+    overflow: hidden;
+}
+.loading path{
+    fill: #6200ee;
+}
+@keyframes loading {
+    from{
+        transform: rotate(60deg);
+    }
+    to{
+        transform: rotate(420deg);
+    }
 }

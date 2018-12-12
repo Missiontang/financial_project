@@ -6,13 +6,13 @@
     <link rel="stylesheet" href="src/css/financial.css">
 </head>
 <body>
-<div class="nav">
+<div class="nav" id="nav">
     <div class="display-flex" style= " width: 1200px; justify-content: space-between">
 
 
         <ul class="nav-ul">
             <div style="display: flex">
-                <img src="src/img/logo.png" alt="" style="height: 40px">
+                <img src="src/img/logo-f-w.png" alt="" style="height: 40px">
             </div>
             <li>
                 <a class="nav-li" href="#">首页</a>
@@ -56,7 +56,7 @@
         <ul class="banner-inner-list display-flex">
             <li>
                 <p class="banner-list-icon">
-
+                    <img src="src/img/icon-1.png" alt="">
                 </p>
                 <p class="banner-list-content">
                     <span class="banner-list-content-title">
@@ -106,16 +106,34 @@
     </div>
 </div>
 
+<div style="height: 800px">
+    <!--<div class="loading">-->
+        <!--<svg>-->
+            <!--<g>-->
+                <!--<path d="M24,48C10.8,48,0,37.2,0,24C0,10.8,10.8,0,24,0c1.9,0,3.4,1.5,3.4,3.4S25.9,6.9,24,6.9C14.5,6.9,6.9,14.5,6.9,24-->
+		<!--S14.5,41.1,24,41.1c1.9,0,3.4,1.5,3.4,3.4C27.4,46.5,25.9,48,24,48z"/>-->
+            <!--</g>-->
+        <!--</svg>-->
+    <!--</div>-->
+</div>
+
 <script>
     window.onload = function () {
         var banner = document.getElementById('banner');
         var _height = window.innerHeight;
-        banner.style.height = _height + 'px'
+        banner.style.height = _height + 'px';
+        console.log(window.scrollY);
+
     };
 
-    window.onscroll = contorller(function () {
-        console.log(1);
-    });
+    window.onscroll = function () {
+        var _nav = document.getElementById('nav');
+        if (window.scrollY > 100) {
+            _nav.className = 'nav nav-scroll'
+        } else {
+            _nav.className = 'nav'
+        }
+    };
 
     var timer = null;
 
