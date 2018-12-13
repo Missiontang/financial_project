@@ -6,6 +6,8 @@
     <link rel="stylesheet" href="src/css/financial.css">
 </head>
 <body>
+
+<!--导航栏-->
 <div class="nav" id="nav">
     <div class="display-flex" style= " width: 1200px; justify-content: space-between">
 
@@ -42,12 +44,14 @@
         </div>
     </div>
 </div>
+
+<!--banner & banner中的list-->
 <div class="banner" id="banner">
     <div class="banner-title">
-        <p class="title-little">
+        <p class="title-little title-transform">
             率先使用信用贷存管模式,放款回款均不触碰资金
         </p>
-        <p>
+        <p class="title-transform">
             <span class="title-large"><span>荷花数据</span></span>
             <span class="title-middle">信贷电子数据保全一站式服务平台</span>
         </p>
@@ -56,7 +60,9 @@
         <ul class="banner-inner-list display-flex">
             <li>
                 <p class="banner-list-icon">
-                    <img src="src/img/icon-1.png" alt="">
+                    <span class="icon-name">
+                        <img src="src/img/fangan.png" style="width: 100%">
+                    </span>
                 </p>
                 <p class="banner-list-content">
                     <span class="banner-list-content-title">
@@ -72,7 +78,9 @@
             </li>
             <li>
                 <p class="banner-list-icon">
-
+                    <span class="icon-name">
+                        <img src="src/img/fengkong2.png" style="width: 100%">
+                    </span>
                 </p>
                 <p class="banner-list-content">
                     <span class="banner-list-content-title">
@@ -88,7 +96,9 @@
             </li>
             <li>
                 <p class="banner-list-icon">
-
+                    <span class="icon-name">
+                        <img src="src/img/yunying.png" style="width: 100%">
+                    </span>
                 </p>
                 <p class="banner-list-content">
                     <span class="banner-list-content-title">
@@ -106,27 +116,23 @@
     </div>
 </div>
 
+<!--列表-->
 <div style="height: 800px; width: 100%">
     <div>
 
     </div>
-    <!--<div class="loading">-->
-        <!--<svg>-->
-            <!--<g>-->
-                <!--<path d="M24,48C10.8,48,0,37.2,0,24C0,10.8,10.8,0,24,0c1.9,0,3.4,1.5,3.4,3.4S25.9,6.9,24,6.9C14.5,6.9,6.9,14.5,6.9,24-->
-		<!--S14.5,41.1,24,41.1c1.9,0,3.4,1.5,3.4,3.4C27.4,46.5,25.9,48,24,48z"/>-->
-            <!--</g>-->
-        <!--</svg>-->
-    <!--</div>-->
 </div>
 
 <script>
     window.onload = function () {
         var banner = document.getElementById('banner');
         var _height = window.innerHeight;
+        var _banner_title = document.getElementsByClassName('title-transform');
         banner.style.height = _height + 'px';
         console.log(window.scrollY);
-
+        for (var i=0;i<_banner_title.length;i++){
+            _banner_title[i].className += ' title-active';
+        }
     };
 
     window.onscroll = function () {
