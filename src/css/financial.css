@@ -222,7 +222,7 @@ a{
 }
 
 .about-div{
-    padding: 64px 0;
+    padding: 96px 0 64px;
     background-color: #f8f8f8;
 }
 .about{
@@ -258,15 +258,15 @@ a{
     align-items: center;
     justify-content: center;
     /*border-bottom: 1px solid #c6ebff;*/
-    /*border: 1px solid #a5e0ff;*/
+    border: 1px solid #c4ebff;
     margin: 20px 0;
     /*border-top: none;*/
     background-color: #f7fcff;
-    transition: all .5s ease-in-out;
-    opacity: 0;
-    transform: translateY(20px) scale(1.02);
-    /*opacity: 1;*/
-    /*transform: translateY(0) scale(1);*/
+    transition: all .3s ease-in-out;
+    /*opacity: 0;*/
+    /*transform: translateY(20px) scale(1.02);*/
+    opacity: 1;
+    transform: translateY(0) scale(1);
 }
 
 .invest-list li:hover{
@@ -306,4 +306,113 @@ a{
     background-color: #333333;
     font-size: 12px;
     color: #999999;
+}
+
+.about-btn{
+    /*border: 1px solid #00a8ff;*/
+    background: #00a8ff;
+    width: 120px;
+    height: 40px;
+    color: #ffffff;
+    transition: all .2s ease-in-out;
+    font-size: 12px;
+    transform-origin: 0 0;
+    position: relative;
+}
+.about-btn::before{
+    content: '';
+    position: absolute;
+    bottom:0;
+    left: 0;
+    background: #48c1ff;
+    width: 100%;
+    height: 40px;
+    /*transform: rotateX(90deg);*/
+    transform-origin: 0 0;
+    transition: all .2s ease-in-out;
+    transform: scaleX(0);
+}
+.about-btn-word{
+    position: absolute;
+    bottom:0;
+    left: 0;
+    width: 100%;
+    height: 40px;
+}
+.about-btn-hover:hover .about-btn::before{
+    transform: scaleX(1);
+    /*transform: rotateX(90deg);*/
+}
+.about-btn:hover .about-btn::after{
+    /*transform: rotateX(0deg);*/
+}
+
+.three-d {
+
+    /* 设置3D舞台布景 */
+    perspective:200px;
+
+    /*设置3D舞台布景过渡效果*/
+    transition:all 0.7s linear;
+    position: relative;
+    color: #fff;
+    display: block;
+    text-decoration: none;
+    /*调用本地字体*/
+    font-family: 'sansationregular';
+    font-smoothing: antialiased;
+    text-transform: capitalize;
+    overflow: visible;
+    line-height: 20px;
+    font-size: 20px;
+    padding: 15px 30px 15px 31px;
+}
+
+.three-d:not(.active):hover {
+    cursor: pointer;
+}
+
+/*给不是当前状态的3D舞台的悬浮与聚焦状态设置变形效果*/
+.three-d:not(.active):hover .three-d-box,
+.three-d:not(.active):focus .three-d-box {
+    transform:translateZ(-25px) rotateX(90deg);
+}
+
+.three-d-box {
+    /*给3D舞台中“.three-d-box”设置过渡与变形效果*/
+    transform:translateZ(-25px);
+    transition:all .3s ease-out;
+    transform-style: preserve-3d;
+    pointer-events: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+/*给导航设置3D前，与3D后变形效果*/
+.front {
+    transform:rotateX(0deg) translateZ(25px);
+    background: #00a8ff;
+}
+
+.back {
+    transform:rotateX(-90deg) translateZ(25px);
+    color: #FFE7C4;
+    background: #48c1ff;
+}
+
+.front, .back {
+    display: block;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-size: 12px;
+    padding: 15px 30px 15px 31px;
+    color: white;
+    pointer-events: none;
+    box-sizing: border-box;
 }
