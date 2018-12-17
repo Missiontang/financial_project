@@ -52,13 +52,26 @@
         </ul>
         <div class="display-flex">
             <!--<img src="src/img/icon-me.png" style="width: 24px; margin-right: 10px">-->
-            <a class="myAccount" href="#">我的账户</a>
+            <p class="about-btn-hover">
+                <span class="about-btn display-flex">
+                    <a href="#" class="about-btn-word display-flex">我的账户</a>
+                </span>
+            </p>
+            <!--<a class="myAccount" href="#">我的账户</a>-->
         </div>
     </div>
 </div>
 
 <!--banner & banner中的list-->
 <div class="banner" id="banner">
+    <ul class="banner-img" id="banner-img">
+        <li id="banner-1" class="banner-img banner-1">
+            <img src="src/img/banner1.jpg" width="100%">
+        </li>
+        <li id="banner-2" class="banner-img banner-2">
+            <img src="" width="100%">
+        </li>
+    </ul>
     <div class="banner-title">
         <p class="title-little title-transform">
             率先使用信用贷存管模式,放款回款均不触碰资金
@@ -143,9 +156,9 @@
                 苏州露荷伊网络科技有限公司成立于xxxx年x月xx日，公司注册资本xxxx万元，系物业管理国家一级资质企业、中国物业管理协会理事单位，通过质量、环境、职业健康安全管理体系三标认证；荣获“2015年物业管理综合实力百强企业”、“2015年物业管理最具成长性企业”、“2016年物业管理综合实力百强企业”、“2016年中国物业管理品牌影响力企业”
             </p>
             <p class="about-btn-hover">
-                <span class="about-btn display-flex">
-                    <a href="#" class="about-btn-word display-flex">关于我们 ></a>
-                </span>
+                <!--<span class="about-btn display-flex">-->
+                    <!--<a href="#" class="about-btn-word display-flex">关于我们 ></a>-->
+                <!--</span>-->
                 <!--<a href="#" class="three-d">-->
                     <!--关于我们 >-->
                     <!--<span class="three-d-box"><span class="front">关于我们 ></span><span class="back">关于我们 ></span></span>-->
@@ -177,9 +190,9 @@
                         <span class="progress"></span>
                         <span style="font-size: 14px; color: #1299df; margin-left: 18px">100%</span>
                     </span>
-                <span class="progress-content display-flex">
-                    1000元起投，等额本息
-                </span>
+                    <span class="progress-content display-flex">
+                        1000元起投，等额本息
+                    </span>
                 </span>
 
             </p>
@@ -308,10 +321,33 @@
         else
             return false;
     }
+    function bannerView(){
+        var banner1 = document.getElementById('banner-1');
+        var banner2 = document.getElementById('banner-2');
+        if (banner1.className === 'banner-img banner-2') {
+            banner1.className = 'banner-img banner-1';
+            banner2.className = 'banner-img banner-2';
+        } else {
+            banner1.className = 'banner-img banner-2';
+            banner2.className = 'banner-img banner-1';
+        }
+
+    }
     window.onload = function () {
         var _height = window.innerHeight;
         var banner = document.getElementById('banner');
+        var bannerImg = document.getElementById('banner-img');
+        var bannerList = bannerImg.getElementsByTagName('li');
+        for (var i=0;i<bannerList.length;i++){
+            bannerList[i].style.height = _height + 'px';
+        }
         banner.style.height = _height + 'px';
+        bannerImg.style.height = _height + 'px';
+        var timer = null;
+        clearInterval(timer);
+        timer = setInterval(function () {
+            bannerView();
+        },4000);
         var _banner_title = document.getElementsByClassName('title-transform');
         var _investList = document.getElementsByClassName('invest-list')[0].getElementsByTagName('li');
 

@@ -66,9 +66,25 @@ a{
 .banner{
     width: 100%;
     /*background-color: #2257c9;*/
-    background: url("../img/banner1.jpg") center no-repeat;
+    /*background: url("../img/banner1.jpg") center no-repeat;*/
     position: relative;
     overflow: hidden;
+}
+.banner-img{
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    transition: all .5s ease-in-out;
+}
+.banner-1{
+    background-color: #999999;
+    opacity: 1;
+}
+.banner-2{
+    /*background-color: #333333;*/
+    opacity: 0;
 }
 .myAccount{
     padding: 8px 24px;
@@ -223,7 +239,7 @@ a{
 
 .about-div{
     padding: 96px 0 64px;
-    background-color: #f8f8f8;
+    background-color: #f7fcff;
 }
 .about{
     width: 1200px;
@@ -251,7 +267,6 @@ a{
     opacity: 1;
     transform: translateY(0) scale(1);
 }
-
 .invest-list li{
     height: 85px;
     display: flex;
@@ -268,7 +283,6 @@ a{
     opacity: 1;
     transform: translateY(0) scale(1);
 }
-
 .invest-list li:hover{
     /*box-shadow: inset 0 0 12px rgba(18, 153, 223, 0.2);*/
     background-color: #e6f6ff;
