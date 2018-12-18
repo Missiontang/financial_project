@@ -250,6 +250,70 @@ a{
     height: 500px;
     padding: 0 0 0 100px;
 }
+
+.peculiarity{
+    width: 100%;
+    padding: 100px 0;
+    background-color: #fefefe;
+}
+.peculiarity-content{
+    width: 1400px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.peculiarity-content li{
+    width: 300px;
+    height: 440px;
+    /*background-color: #f2f2f2;*/
+    position: relative;
+}
+.square-content{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 380px;
+    width: 100%;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 0 25px rgba(0, 168, 255, 0.23);
+    padding: 0 30px;
+}
+.square-content-title{
+    text-align: center;
+    display: block;
+    padding: 100px 0 30px 0;
+    border-bottom: 1px dashed #00a8ff;
+    font-size: 24px;
+}
+.square-content-word{
+    /*text-align: center;*/
+    display: block;
+    padding: 20px 0 0 0;
+    color: #666666;
+    font-size: 18px;
+    line-height: 36px;
+}
+.circle-content{
+    text-align: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+.circle-content-inner{
+    /*display: inline-block;*/
+    margin: auto;
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+    background-color: #ffffff;
+    box-shadow: 0 0 25px rgba(0, 168, 255, 0.23);
+}
+.circle-content-inner img{
+    width: 72px;
+
+}
 .invest-title{
     padding: 20px 0;
     width: 1200px;
